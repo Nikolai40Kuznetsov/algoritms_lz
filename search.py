@@ -21,6 +21,7 @@ for i in range(1, len(sorted_list)+1):
     if sorted_list[i-1] == int(chosen): # сравниваем элемент списка с искомым
         print("Элемент найден в позиции", i)
         print("В линейном поиске было проведено", counter_1, "сравнений")
+# вводим начало, конец и середину списка
 first = 0
 last = len(sorted_list) - 1
 central = len(sorted_list) // 2
@@ -28,6 +29,7 @@ while first <= last:
     if int(chosen) == sorted_list[central]:
         print("В бинарном поиске было проведено", counter_2, "сравнений")
         break
+    # обрезаем массив исходя из сравнения нужного элемента с центральным
     if int(chosen) > sorted_list[central]:
         first = central + 1
     else:
